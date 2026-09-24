@@ -297,7 +297,64 @@ section{padding:96px 0;border-bottom:1px solid var(--line);}
 @media (max-width:900px){.collab-wrap{grid-template-columns:1fr;}}
 .collab-big h2{font-family:var(--serif);font-size:clamp(30px,4vw,48px);font-weight:400;color:var(--paper);line-height:1.2;max-width:520px;}
 .collab-big p{color:var(--ink-dim);margin-top:20px;max-width:460px;font-size:15.5px;line-height:1.7;}
+  
+/* ---------- people & collaborators ---------- */
+.people-intro{
+  max-width:760px;
+  margin-bottom:48px;
+}
 
+.people-intro p{
+  color:var(--ink-dim);
+  font-size:16px;
+  line-height:1.8;
+  max-width:720px;
+}
+
+.people-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  border:1px solid var(--line);
+  background:var(--line);
+}
+
+.people-card{
+  background:var(--blueprint);
+  padding:34px 30px 32px;
+  min-height:220px;
+}
+
+.people-card .label{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--brass);
+  margin-bottom:18px;
+  display:block;
+}
+
+.people-card h3{
+  font-family:var(--serif);
+  font-size:22px;
+  font-weight:400;
+  color:var(--paper);
+  line-height:1.3;
+  margin-bottom:12px;
+}
+
+.people-card p{
+  color:var(--ink-dim);
+  font-size:14px;
+  line-height:1.7;
+}
+
+@media (max-width:900px){
+  .people-grid{
+    grid-template-columns:1fr;
+  }
+}
 /* ---------- footer ---------- */
 footer{padding:56px 0 44px;}
 .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:40px;}
@@ -329,6 +386,7 @@ footer{padding:56px 0 44px;}
     </a>
     <div class="navlinks">
       <a href="#about">About</a>
+      <a href="#people">People</a>
       <a href="#research">Research</a>
       <a href="#initiatives">Initiatives</a>
       <a href="#publications">Publications</a>
@@ -379,7 +437,55 @@ footer{padding:56px 0 44px;}
       </div>
     </div>
   </section>
+  
+  <section class="wrap" id="people">
+  <div class="section-head">
+    <h2>People &amp; Collaborators</h2>
+    <p>An evolving community of scholars and practitioners working across technology, institutions, and human flourishing.</p>
+  </div>
 
+  <div class="people-intro">
+    <p>
+      SVIHTS brings together scholars, technologists, researchers, and practitioners
+      working at the intersection of technology, institutions, and human flourishing.
+      The community includes Oxbridge-trained scholars and experienced technology
+      practitioners based in Silicon Valley, with more than a decade of experience
+      across established technology companies and emerging ventures.
+    </p>
+  </div>
+
+  <div class="people-grid">
+
+    <div class="people-card">
+      <span class="label">Scholars</span>
+      <h3>Interdisciplinary inquiry</h3>
+      <p>
+        Researchers working across AI, technology policy, learning, governance,
+        and the social and institutional dimensions of advanced technology.
+      </p>
+    </div>
+
+    <div class="people-card">
+      <span class="label">Practitioners</span>
+      <h3>Technology in practice</h3>
+      <p>
+        Experienced practitioners from Silicon Valley and beyond, bringing
+        perspectives from both established technology companies and emerging ventures.
+      </p>
+    </div>
+
+    <div class="people-card">
+      <span class="label">Collaborators</span>
+      <h3>A wider intellectual network</h3>
+      <p>
+        Engineers, educators, policy thinkers, institutional leaders, and
+        researchers who contribute to selected projects, seminars, and working groups.
+      </p>
+    </div>
+
+  </div>
+  </section>
+  
   <section class="wrap" id="research">
     <div class="section-head">
       <h2>Framework areas</h2>
@@ -568,6 +674,7 @@ footer{padding:56px 0 44px;}
     </a>
     <div class="foot-links">
       <a href="#about">About</a>
+      <a href="#people">People</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#seminar">Events</a>
